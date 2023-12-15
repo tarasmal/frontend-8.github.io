@@ -1,15 +1,119 @@
+@font-face {
+    font-family: 'Peckham Press';
+    src: url('assets/font/PeckhamPress-Trial.otf') format('woff');
+}
+
 body {
     background-color: black;
+    overflow-x: hidden;
+    color: white;
 }
+
 .container {
     display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
     flex-direction: column;
     padding: 60px;
+    row-gap: 50px;
+}
+
+.grey {
+    color: grey;
+}
+.black {
+    color: black;
+}
+.toxic {
+    color: #2BF6FA;
+}
+.very-small {
+    font-size: 12px;
+}
+.small {
+    font-size: 18px;
+}
+
+.medium {
+    font-size: 22px;
+}
+
+.large {
+    font-size: 56px;
 }
 
 .header {
     width: 100%;
     display: flex;
+}
+.frame-1 {
+    display: flex;
+    column-gap: 100px;
+    .info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+
+    }
+}
+
+#trusted-by-athletes {
+    display: flex;
+    font-family: 'Peckham Press', sans-serif;
+    color: white;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+#img1 {
+    flex-grow: 1;
+    height: 822px;
+}
+
+#description {
+
+    color: grey;
+}
+
+#rating {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 400px;
+
+}
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.rating-item-header {
+    color: white;
+}
+.rating-item-description {
+    color: grey;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+    background-color: #2BF6FA;
+    padding: 16px 8px;
+
+
+}
+#buy-now {
+    font-size: 22px;
+}
+
+.pay {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
