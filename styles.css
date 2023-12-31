@@ -2,21 +2,30 @@
     font-family: 'Peckham Press';
     src: url('assets/font/PeckhamPress-Trial.otf') format('woff');
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.frame-1, .btn {
+    animation: fadeIn 3s ease-out;
+}
+
+.btn:hover {
+    transform: scale(1.055);
+    transition: transform 0.3s ease-in-out;
+}
 
 body {
     background-color: black;
     overflow-x: hidden;
     color: white;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    flex-direction: column;
-    padding: 60px;
-    row-gap: 50px;
 }
 
 .grey {
@@ -41,6 +50,18 @@ body {
 
 .large {
     font-size: 56px;
+    font-family: 'Peckham Press', sans-serif;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 120px 60px;
+    row-gap: 50px;
 }
 
 .header {
@@ -49,6 +70,7 @@ body {
 }
 .frame-1 {
     display: flex;
+    justify-content: center;
     column-gap: 100px;
     .info {
         display: flex;
@@ -105,8 +127,8 @@ body {
     height: fit-content;
     background-color: #2BF6FA;
     padding: 16px 8px;
-
-
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
 }
 #buy-now {
     font-size: 22px;
@@ -117,3 +139,51 @@ body {
     flex-direction: column;
     row-gap: 20px;
 }
+
+#group {
+    height: 170px;
+    width: 690px;
+}
+
+.frame-2 {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 25px;
+    }
+
+}
+
+#img2 {
+    height: 483px;
+    flex-grow: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.grid-item {
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+
+.frame-3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.list-item {
+    margin-bottom: 10px;
+}
+
+
+
